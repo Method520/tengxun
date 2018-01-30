@@ -7,7 +7,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/recommend'
+      redirect: '/home'
     }
     // {
     //   path: '/user',
