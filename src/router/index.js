@@ -1,30 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import index from '@/views/index'
 
 Vue.use(Router)
 
 export default new Router({
   routes: [
     {
-      path: '/',
-      redirect: '/home'
+      path: '/home',
+      name: 'index',
+      component: index
     }
-    // {
-    //   path: '/user',
-    //   name: 'user',
-    //   component: MyUser
-    // },
-    // {
-    //   path: '/recommend',
-    //   name: 'recommend',
-    //   component: MyRecommend,
-    //   children: [
-    //     {
-    //       path: ':id',
-    //       name: 'songlistdetail',
-    //       component: MySongListDetail
-    //     }
-    //   ]
-    // }
   ]
 })

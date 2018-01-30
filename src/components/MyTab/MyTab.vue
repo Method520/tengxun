@@ -1,17 +1,10 @@
 <template>
   <div class="my-tab">
-    <router-link tag="div" class="tab-item" :to="{ name: 'recommend' }">
-      <span class="tab-link">推荐</span>
+    <router-link tag="div" class="tab-item" :to="{ name: 'personTarget' }">
+      <span class="tab-link">个人目标(0)</span>
     </router-link>
-    <router-link tag="div" class="tab-item" :to="{ name: 'singer' }">
-      <span class="tab-link">歌手</span>
-    </router-link>
-    <router-link tag="div" class="tab-item" :to="{ name: 'rank' }">
-      <span class="tab-link">排行
-      </span>
-    </router-link>
-    <router-link tag="div" class="tab-item" :to="{ name: 'search' }">
-      <span class="tab-link">搜索</span>
+    <router-link tag="div" class="tab-item" :to="{ name: 'teamTarget' }">
+      <span class="tab-link">团队目标(0)</span>
     </router-link>
   </div>
 </template>
@@ -21,7 +14,7 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-@import '~@/common/scss/const.scss';
+@import '@/common/scss/const.scss';
 
 .my-tab {
   display: flex;
