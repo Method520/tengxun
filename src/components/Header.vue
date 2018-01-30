@@ -15,9 +15,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  header{
-    height:32px;
-    width:50px;
+  .header{
+    height:rem(44);
+    width:100%;
     background: #1C1C20;
   }
 </style>
