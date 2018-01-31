@@ -21,7 +21,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .header{
-    height:44px;
+    height:rem(44);
     width:100%;
     background: #1C1C20;
     .back_icon{

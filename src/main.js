@@ -6,6 +6,7 @@ import App from './App'
 import router from './router' // vue-router
 import store from './store' // vuex
 import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 import '@/common/scss/index.scss'
 
