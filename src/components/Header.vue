@@ -5,10 +5,6 @@
     <div class="more">
       <img src="../assets/img/see_head_more.png"/>
     </div>
-    <div class="block">
-      <span class="demonstration">有默认值</span>
-      <el-color-picker v-model="color1"></el-color-picker>
-    </div>
   </div>
 
 </template>
@@ -17,7 +13,6 @@
 export default {
   data () {
     return {
-      color1: '#409EFF'
     }
   }
 }
