@@ -3,8 +3,11 @@
     <div class="mytab">
       <el-tabs v-model="activeName" @tab-click="handleClick">
         <el-tab-pane :label="`个人目标(${PersonNum})`" name="first">
-          <div class="personBg">
+          <div class="personBg" v-if="this.isShowIndexImage">
             <img src="../assets/img/home_img.png" class="homeImage"/>
+          </div>
+          <div class="personTargetInfo" v-if="isShowTargetInfo">
+
           </div>
         </el-tab-pane>
         <el-tab-pane :label="`团队目标(${teamNum})`" name="second">12222222222222</el-tab-pane>
@@ -18,6 +21,7 @@
 
 <script>
 export default {
+  props: ['isShowIndexImage', 'isShowTargetInfo'],
   data() {
     return {
       activeName: 'first',
@@ -27,7 +31,6 @@ export default {
   },
   methods: {
     handleClick(tab, event) {
-      console.log(tab, event)
     }
   }
 }

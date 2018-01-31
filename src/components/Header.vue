@@ -1,7 +1,8 @@
 <template>
   <div class="header">
-
-    <div class="back_icon"><i class="el-icon-arrow-left"></i>返回</div>
+    <div class="back_icon" @click="comBack">
+      <i class="el-icon-arrow-left"></i>返回
+    </div>
     {{title}}
     <div class="more">
       <!--<img src="../assets/img/see_head_more.png"/>-->
@@ -16,6 +17,11 @@ export default {
   data () {
     return {
     }
+  },
+  methods: {
+    comBack: function() {
+      this.$emit('goBack')
+    }
   }
 }
 </script>
@@ -26,6 +32,8 @@ export default {
     font-size:18px;
     color:#fff;
     line-height:44px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
     font-weight:500;
     text-align:center;
     width:100%;

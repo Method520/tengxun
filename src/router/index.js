@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/views/index'
+import personTargetInfo from '@/views/personTargetInfo'
 // import personTarget from '@/views/personTarget'
 // import teamTarget from '@/views/teamTarget'
 
@@ -21,6 +22,11 @@ export default new Router({
       path: '/home',
       name: 'index',
       component: index
+    },
+    {
+      path: '/addPersonTarget',
+      name: 'personTargetInfo',
+      component: personTargetInfo
     }
     // {
     //   path: '/personTarget',

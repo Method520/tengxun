@@ -3,7 +3,7 @@
     <div class="footerWrap">
       <div class="myT">
       </div>
-      <div class="plus">
+      <div class="plus" @click="personTargetInfo">
         <img src="../assets/img/home_btn_new.png"/>
       </div>
       <div class="myAttention"></div>
@@ -16,6 +16,11 @@
 export default {
   data () {
     return {
+    }
+  },
+  methods: {
+    personTargetInfo: function() {
+      this.$emit('getPersoninfo')
     }
   }
 }
