@@ -9,9 +9,11 @@
           <div class="targetInfo" v-if="this.PersonNum > 0">
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
+              <div class="weight">权重</div>
             </div>
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
+              <div class="weight">权重</div>
             </div>
           </div>
         </el-tab-pane>
@@ -39,14 +41,14 @@ export default {
   data() {
     return {
       activeName: 'first',
-      PersonNum: 1,
+      PersonNum: 0,
       teamNum: 1
     }
   },
   methods: {
     handleClick(tab, event) {
-      console.log('@@@@', tab.index)
-      this.$emit('handleClick', tab.index)
+      console.log('@@@@', tab)
+      this.$emit('handleClick', tab)
     },
     innerhandleClick (tab, event) {}
   },
@@ -116,6 +118,13 @@ export default {
         font-size:14px;
         line-height:22px;
         padding: 20px 10px;
+      }
+      .weight{
+        text-align:center;
+        font-size: 11px;
+        color: #4D9EF7;
+        margin-top:-10px;
+        letter-spacing: 0;
       }
       .draf{
         color:#F02525;

@@ -26,10 +26,11 @@
     methods: {
       handleClick(target) {
         console.log('dddddddddddddddddd', target)
-        this.active = target
+        this.title = target.label.substring(0, 4)
+        this.active = target.index
       },
       getPersonInfo () {
-        alert(this.active)
+        alert('新增' + this.title)
       }
     },
     components: {

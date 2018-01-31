@@ -6,10 +6,11 @@
           <div class="targetInfo">
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
-              <div class="weight">权重</div>
+              <div class="weight">绩效管理组</div>
             </div>
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
+              <div class="weight">绩效管理组</div>
             </div>
           </div>
         </el-tab-pane>
