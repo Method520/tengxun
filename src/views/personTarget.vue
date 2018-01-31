@@ -2,7 +2,7 @@
   <div class="app-wrapper">
     <article class="main-container">
       <Header :title="title"/>
-      <h1>person</h1>
+      <h1>新增页面</h1>
     </article>
   </div>
 </template>

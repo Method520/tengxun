@@ -1,62 +1,45 @@
 <template>
-  <div class="my-tab-wrap" id="myTab">
+  <div class="my-tab-wrap" id="myTeamTab">
     <div class="mytab">
       <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane :label="`个人目标(${PersonNum})`" name="first">
-          <div class="personBg" v-if="this.PersonNum==0">
-            <img src="../assets/img/home_img.png" class="homeImage"/>
-          </div>
-          <div class="targetInfo" v-if="this.PersonNum > 0">
+        <el-tab-pane label="小组" name="group">
+          <div class="targetInfo">
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
+              <div class="weight">权重</div>
             </div>
             <div class="cell">
               <div class="cell-title"><span class="draf">[草稿中]</span>关于员工如何提升自我技能的相关</div>
             </div>
           </div>
         </el-tab-pane>
-        <el-tab-pane :label="`团队目标(${teamNum})`" name="second">
-          <div class="personBg" v-if="this.teamNum==0">
-            <img src="../assets/img/home_img.png" class="homeImage"/>
-          </div>
-          <div class="teamInner" v-if="this.teamNum > 0">
-            <MyTeamTab/>
-          </div>
-        </el-tab-pane>
+        <el-tab-pane label="中心" name="center">222</el-tab-pane>
+        <el-tab-pane label="部门" name="department">33</el-tab-pane>
+        <el-tab-pane label="BG" name="bg">43</el-tab-pane>
       </el-tabs>
-    </div>
-    <div class="setting">
-      <img src="../assets/img/titlebar_set.png"/>
     </div>
   </div>
 </template>
 
 <script>
-import MyTeamTab from '@/components/MyTeamTab'
 
 export default {
   props: [''],
   data() {
     return {
-      activeName: 'first',
-      PersonNum: 1,
-      teamNum: 1
+      activeName: 'group'
     }
   },
   methods: {
-    handleClick(tab, event) {
-      console.log('@@@@', tab.index)
-      this.$emit('handleClick', tab.index)
-    },
-    innerhandleClick (tab, event) {}
+    handleClick (tab, event) {}
   },
   components: {
-    MyTeamTab
   }
 }
 </script>
 <style lang="scss">
-  #myTab{
+  #myTeamTab{
+    margin:10px 10px;
     .el-tabs__nav-wrap{
       background-color:#fff;
     }
@@ -67,21 +50,23 @@ export default {
       margin-bottom:0;
     }
     .el-tabs__nav {
-      width: 96%;
-      height: 44px;
+      width: 100%;
+      height: 36px;
+      line-height:36px;
+      background: #FFFFFF;
+      box-shadow: 2px 2px 4px 2px rgba(0,0,0,0.10);
+      border-radius: 4px;
     }
     .el-tabs__item{
-      width:42%;
+      width:25%;
       color:#ACACAC;
       font-size: 16px;
+      height:36px;
+      line-height:36px;
       text-align:center;
     }
     .el-tabs__item.is-active{
       color:#333;
-    }
-    .el-tabs__content{
-      background: #F6F6F6;
-      height:579px;
     }
   }
 </style>
@@ -90,7 +75,6 @@ export default {
     position:relative;
   }
  .mytab{
-   background: #F6F6F6;
    .personBg{
      img{
        width:100%;
@@ -108,7 +92,7 @@ export default {
     }
   }
   .targetInfo{
-    padding:18px;
+    padding:10px;
     width:100%;
     overflow-y: scroll;
     .cell{
@@ -116,6 +100,13 @@ export default {
         font-size:14px;
         line-height:22px;
         padding: 20px 10px;
+      }
+      .weight{
+        text-align:center;
+        font-size: 11px;
+        color: #4D9EF7;
+        margin-top:-10px;
+        letter-spacing: 0;
       }
       .draf{
         color:#F02525;

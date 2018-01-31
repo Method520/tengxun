@@ -2,8 +2,8 @@
   <div class="app-wrapper">
     <article class="main-container">
       <Header :title="title"/>
-      <MyTab  :isShowIndexImage="isShowIndexImage"/>
-      <Footer @getPersoninfo="getPersonInfo"/>
+      <MyTab @handleClick="handleClick"/>
+      <Footer @getPersoninfo="getPersonInfo()"/>
     </article>
   </div>
 </template>
@@ -18,16 +18,18 @@
     data() {
       return {
         title: '我的目标',
-        isShowIndexImage: true
+        active: 0
       }
     },
     created () {
     },
     methods: {
+      handleClick(target) {
+        console.log('dddddddddddddddddd', target)
+        this.active = target
+      },
       getPersonInfo () {
-        if (this.title === '我的目标') {
-          this.$router.push('/addPersonTarget')
-        }
+        alert(this.active)
       }
     },
     components: {
@@ -38,5 +40,8 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
+  .app-wrapper{
+    background: #F6F6F6;
+  }
 </style>
