@@ -2,12 +2,12 @@
   <div class="my-tab-wrap" id="myTab">
     <div class="mytab">
       <el-tabs v-model="activeName" @tab-click="handleClick">
-        <el-tab-pane label="个人目标" name="first">
+        <el-tab-pane :label="`个人目标(${PersonNum})`" name="first">
           <div class="personBg">
             <img src="../assets/img/home_img.png" class="homeImage"/>
           </div>
         </el-tab-pane>
-        <el-tab-pane label="团队目标" name="second">12222222222222</el-tab-pane>
+        <el-tab-pane :label="`团队目标(${teamNum})`" name="second">12222222222222</el-tab-pane>
       </el-tabs>
     </div>
     <div class="setting">
@@ -21,7 +21,8 @@ export default {
   data() {
     return {
       activeName: 'first',
-      num: 0
+      PersonNum: 0,
+      teamNum: 0
     }
   },
   methods: {
@@ -65,6 +66,7 @@ export default {
    .personBg{
      img{
        width:100%;
+       height:579px;
      }
    }
  }

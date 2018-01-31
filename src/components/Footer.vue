@@ -1,0 +1,46 @@
+<template>
+  <div class="footer">
+    <div class="footerWrap">
+      <div class="myT">
+      </div>
+      <div class="plus">
+        <img src="../assets/img/home_btn_new.png"/>
+      </div>
+      <div class="myAttention"></div>
+    </div>
+  </div>
+
+</template>
+
+<script>
+export default {
+  data () {
+    return {
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style lang="scss" scoped>
+.footerWrap{
+  z-index:500;
+  width:100%;
+  height:50px;
+  background-color:#4FA2FE;
+  position:absolute;
+  bottom:0;
+  border:1px solid #ccc;
+  .plus{
+    text-align:center;
+    margin-top:-15px;
+    img{
+      width:56px;
+      height:56px;
+    }
+  }
+  .myT{
+    float:left;
+  }
+}
+</style>

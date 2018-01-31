@@ -3,6 +3,7 @@
     <article class="main-container">
       <Header :title="title"/>
       <MyTab/>
+      <Footer/>
     </article>
   </div>
 </template>
@@ -10,6 +11,7 @@
 <script>
   import Header from '@/components/Header'
   import MyTab from '@/components/MyTab'
+  import Footer from '@/components/Footer'
 
   export default {
     name: 'index',
@@ -24,7 +26,8 @@
     },
     components: {
       Header,
-      MyTab
+      MyTab,
+      Footer
     }
   }
 </script>
