@@ -2,14 +2,13 @@
   <div class="app-wrapper">
     <article class="main-container">
       <Header :title="title"/>
-      <MyTab/>
+      <h1>person</h1>
     </article>
   </div>
 </template>
 
 <script>
   import Header from '@/components/Header'
-  import MyTab from '@/components/MyTab'
 
   export default {
     name: 'index',
@@ -23,8 +22,7 @@
     methods: {
     },
     components: {
-      Header,
-      MyTab
+      Header
     }
   }
 </script>
