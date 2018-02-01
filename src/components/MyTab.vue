@@ -70,12 +70,12 @@ export default {
     }
     .el-tabs__nav {
       width: 96%;
-      height: 44px;
+      height: rem(44);
     }
     .el-tabs__item{
       width:42%;
       color:#ACACAC;
-      font-size: 16px;
+      font-size: rem(16);
       text-align:center;
     }
     .el-tabs__item.is-active{
@@ -83,7 +83,7 @@ export default {
     }
     .el-tabs__content{
       background: #F6F6F6;
-      height:579px;
+      height:rem(579);
     }
   }
 </style>
@@ -96,28 +96,28 @@ export default {
    .personBg{
      img{
        width:100%;
-       height:579px;
+       height:rem(579);
      }
    }
  }
   .setting{
     position:absolute;
-    right:2px;
+    right:rem(2);
     top:0px;
     img{
-      width: 54px;
-      height: 43px;
+      width: rem(54);
+      height: rem(43);
     }
   }
   .targetInfo{
-    padding:18px;
+    padding:rem(18);
     width:100%;
     overflow-y: scroll;
     .cell{
       .cell-title{
-        font-size:14px;
-        line-height:22px;
-        padding: 20px 10px;
+        font-size:rem(14);
+        line-height:rem(22);
+        padding: rem(20) rem(10);
       }
       .weight{
         text-align:center;

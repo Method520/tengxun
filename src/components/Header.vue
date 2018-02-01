@@ -29,33 +29,33 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
   .header{
-    font-size:18px;
+    font-size:rem(18);
     color:#fff;
-    line-height:44px;
+    line-height:rem(44);
     background: #FFFFFF;
     box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
     font-weight:500;
     text-align:center;
     width:100%;
     position: relative;
-    height:44px;
+    height:rem(44);
     background: #1C1C20;
     .el-icon-arrow-left{
-      font-size:20px;
+      font-size:rem(20);
     }
     .back_icon{
       position:absolute;
       color:#fff;
-      font-size:16px;
+      font-size:rem(16);
       left:10px;
-      line-height:44px;
+      line-height:rem(44);
     }
     .more{
      img {
        position:absolute;
-       width: 30px;
-       height: 30px;
-       right:10px;
+       width: rem(30);
+       height: rem(30);
+       right:rem(10);
      }
     }
   }

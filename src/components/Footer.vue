@@ -31,7 +31,7 @@ export default {
 .footerWrap{
   z-index:500;
   width:100%;
-  height:50px;
+  height:rem(50);
   background-color:#4FA2FE;
   position:absolute;
   bottom:0;
@@ -40,8 +40,8 @@ export default {
     text-align:center;
     margin-top:-15px;
     img{
-      width:56px;
-      height:56px;
+      width:rem(56);
+      height:rem(56);
     }
   }
   .myT{
